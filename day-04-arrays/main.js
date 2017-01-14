@@ -58,11 +58,21 @@ const oldest = inventors.sort(function (a, b) {
 
 console.table(oldest)
 
+// 6. Sort exercise
+// Sort the people alphabetically by last name
+
+const alpha = people.sort((lastOne, nextOne) => {
+  const [aLast, aFirst] = lastOne.split(', ')
+  const [bLast, bFirst] = nextOne.split(', ')
+  return aLast > bLast ? 1 : -1
+})
+
+console.log(alpha)
 
 
-
-
+/////////////////////////
 // Text Scramble
+////////////////////////
 class TextScramble {
   constructor(el) {
     this.el = el
